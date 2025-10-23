@@ -3,7 +3,7 @@
 import numpy as np
 import pytest
 
-from imglabel.core import compute_similar_mask
+from imglabel.core.mask_computation import compute_similar_mask
 
 
 def test_compute_similar_mask():

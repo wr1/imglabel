@@ -17,6 +17,7 @@ dependencies = [
     "scipy",
     "scikit-image",
     "PyYAML",
+    "PyQt6",
 ]
 
 [project.scripts]

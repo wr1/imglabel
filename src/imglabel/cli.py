@@ -11,6 +11,7 @@ from .core import (
     cluster_and_get_polygons,
     save_criteria,
     load_criteria,
+    select_boundary_component,
 )
 
 
@@ -88,6 +89,7 @@ def main():
                 patch.remove()
             bbox_patches.clear()
             full_mask = compute_similar_mask(img_hsv, selected_hsv, threshold_hue, threshold_sat)
+            full_mask = select_boundary_component(full_mask, y, x)
             polygons = cluster_and_get_polygons(full_mask)
             for poly in polygons:
                 ax.add_patch(poly)
